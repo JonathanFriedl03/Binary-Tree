@@ -14,15 +14,15 @@ namespace Binary_Tree_Class
 
             binaryTree.Add(50);
             binaryTree.Add(65);
-            binaryTree.InsertAtEnd(45);
-            binaryTree.InsertAtEnd(25);
-            binaryTree.InsertAtEnd(40);
-            binaryTree.InsertAtEnd(80);
-            binaryTree.InsertAtEnd(22);
-            binaryTree.InsertAtEnd(48);
-            binaryTree.InsertAtEnd(72);
-            binaryTree.InsertAtEnd(74);
-            binaryTree.InsertAtEnd(15);
+            binaryTree.Add(45);
+            binaryTree.Add(25);
+            binaryTree.Add(40);
+            binaryTree.Add(80);
+            binaryTree.Add(22);
+            binaryTree.Add(48);
+            binaryTree.Add(72);
+            binaryTree.Add(74);
+            binaryTree.Add(15);
         }
     }
 }

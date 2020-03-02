@@ -10,77 +10,90 @@ namespace Binary_Tree_Class
     {
         TreeNode start;
         TreeNode tail;
-        
-        public void Add(int value)
+
+        public void Add(int data)
         {
-            TreeNode node = new TreeNode(value);
-           //create initial node
-            if (start == null)
+            //if the root is not null then we call the Insert method on the root node
+            if (start != null)
             {
-                start = node;
-                return;
+                start.Add(data);
             }
-            TreeNode temp = start;
-                while (temp.link != null)
-                {
-                // if the value passed in is greater or equal to the data then add to the right node
-                if (value >= node.Data)
-                { //if no node present create one
-                    if (node.Right == null)
-                    {
-                        node.Right = new TreeNode(value);
-                    }
-                    else
-                    {// if value isnt null keep calling add on right side
-                        node.Right.Add(value);
-                    }
-                }
-                else
-                {//if value passed in is less than the data insert to the left
-                    if (node.Left == null)
-                    {//if no node is present create one
-                        node.Left = new TreeNode(value);
-                    }
-                    else
-                    {//if the left node is not null then keep calling add on the left side
-                        node.Left.Add(value);
-                    }
-                    // temp = temp.link;
-                }
-                temp.link = node;
+            else
+            {//if the root is null then we set the root to be a new node based on the data passed in
+                start = new TreeNode(data);
+            }
+        }
+
+        //public void Add(int value)
+        //{
+        //    TreeNode node = new TreeNode(value);
+        //   //create initial node
+        //    if (start == null)
+        //    {
+        //        start = node;
+        //        return;
+        //    }
+        //    TreeNode temp = start;
+        //        while (temp.link != null)
+        //     {
+        //        // if the value passed in is greater or equal to the data then add to the right node
+        //        if (value >= node.Data)
+        //        { //if no node present create one
+        //            if (node.Right == null)
+        //            {
+        //                node.Right = new TreeNode(value);
+        //            }
+        //            else
+        //            {// if value isnt null keep calling add on right side
+        //                Add(value);
+        //            }
+        //        }
+        //        else
+        //        {//if value passed in is less than the data insert to the left
+        //            if (node.Left == null)
+        //            {//if no node is present create one
+        //                node.Left = new TreeNode(value);
+        //            }
+        //            else
+        //            {//if the left node is not null then keep calling add on the left side
+        //                Add(value);
+        //            }
+        //            // temp = temp.link;
+        //        }
+        //        temp.link = node;
             
-            }
+        //    }
 
 
-        }
-        public int Search(int value)
-        {
-            //start or first node
-            int searchedNode = value;
+        //}
+        //public int Search(int value)
+        //{
+        //    //start or first node
+        //    int searchedNode = value;
 
-            //loop through this node and all children
-            while (searchedNode != null)
-            {
-                //if value of specific node is equal to value passed in return it
-                if (value == searchedNode.data)
-                {
-                    return searchedNode;
-                }
-                //if the value passed in is greater than the specific data then go to right child
-                else if (value > searchedNode.data)
-                {
-                    searchedNode = searchedNode.right;
-                }
-                //otherwise if the value passed in is less than the specific data then go left child
-                else
-                {
-                    searchedNode = searchedNode.Left;
-                }
+        //    //loop through this node and all children
+        //    while (searchedNode != null)
+        //    {
+        //        //if value of specific node is equal to value passed in return it
+        //        if (value == searchedNode.data)
+        //        {
+        //            return searchedNode;
+        //        }
+        //        //if the value passed in is greater than the specific data then go to right child
+        //        else if (value > searchedNode.data)
+        //        {
+        //            searchedNode = searchedNode.right;
+        //        }
+        //        //otherwise if the value passed in is less than the specific data then go left child
+        //        else
+        //        {
+        //            searchedNode = searchedNode.Left;
+        //        }
 
-            }//node not found
-            return null;
+        //    }//node not found
+        //    return null;
 
-        }
+        //}
     }
   
 
@@ -117,4 +130,4 @@ namespace Binary_Tree_Class
     //     //temp.link = node;
     // }
 }
-}
+
