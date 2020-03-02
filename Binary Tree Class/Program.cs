@@ -23,6 +23,7 @@ namespace Binary_Tree_Class
             binaryTree.Add(72);
             binaryTree.Add(74);
             binaryTree.Add(15);
+           binaryTree.Search(15);
         }
     }
 }
