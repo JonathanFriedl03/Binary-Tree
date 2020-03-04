@@ -17,7 +17,6 @@ namespace Binary_Tree_Class
             if (start == null)
             {
                 start = new TreeNode(value);
-
             }
             else
             {//if the root is not null then we call the Insert method on the root node
@@ -81,10 +80,8 @@ namespace Binary_Tree_Class
                         }
                         else
                         {// if value isnt null keep calling add on right side
-                            searchedNode = searchedNode.RightNode;
-                            
-                        }
-                        
+                            searchedNode = searchedNode.RightNode;                            
+                        }                        
                     }
                     //otherwise if the value passed in is less than the specific data then go left child
                     else
@@ -96,13 +93,9 @@ namespace Binary_Tree_Class
                         else
                         {//if the left node is not null then keep calling add on the left side
                             searchedNode = searchedNode.LeftNode;
-
-
                         } 
-
                     }
-                }
-                
+                }               
                 
             }//node not found
             return false;
